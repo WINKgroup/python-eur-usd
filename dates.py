@@ -6,7 +6,7 @@ def conversion(series):
 	series = series.astype('float', copy=False)
 	return series
 
-df = pd.read_csv('2001-2019.csv', index_col=0, infer_datetime_format=True)
+df = pd.read_csv('2001-2019.csv', index_col=0)
 df['Ultimo'] = conversion(df['Ultimo'])
 df['Apertura'] = conversion(df['Apertura'])
 df['Massimo'] = conversion(df['Massimo'])
